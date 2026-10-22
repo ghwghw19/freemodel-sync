@@ -5,10 +5,9 @@ from pathlib import Path
 
 import pytest
 import yaml
+from conftest import make_selection
 
 from freemodel_sync.adapters import available_adapters, get_adapter_class, write_if_changed
-
-from conftest import make_selection
 
 
 def test_all_adapters_registered():
@@ -98,7 +97,10 @@ def test_dsh_adapter_replaces_only_managed_entry(tmp_path, selection):
     assert "    foo: 1   # keep me\n" in text and "# my patch\n" in text and "# default model\n" in text
     assert "- id: agent-default-model\n  config: {provider: my-openrouter, model: 'vendor/a:free'}\n" in text
     entries = yaml.safe_load(text)
-    assert entries[1] == {"id": "agent-default-model", "config": {"provider": "my-openrouter", "model": "vendor/a:free"}}
+    assert entries[1] == {
+        "id": "agent-default-model",
+        "config": {"provider": "my-openrouter", "model": "vendor/a:free"},
+    }
     assert not a.apply(selection).changed
 
 

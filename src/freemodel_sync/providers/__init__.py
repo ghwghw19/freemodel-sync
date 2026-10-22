@@ -1,3 +1,4 @@
+from . import openrouter  # noqa: F401  (registers the built-in provider)
 from .base import (
     Provider,
     ProviderError,
@@ -5,7 +6,6 @@ from .base import (
     get_provider_class,
     register_provider,
 )
-from . import openrouter  # noqa: F401  (registers the built-in provider)
 
 __all__ = [
     "Provider",

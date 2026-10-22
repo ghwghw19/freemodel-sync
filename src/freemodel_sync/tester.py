@@ -40,7 +40,7 @@ class ResultCache:
         self._daily_count: int = 0
 
     # -- persistence -----------------------------------------------------
-    def load(self, path: Optional[Union[str, Path]] = None) -> "ResultCache":
+    def load(self, path: Optional[Union[str, Path]] = None) -> ResultCache:
         """Load results from ``path`` (or the instance path); never raises."""
 
         if path is not None:

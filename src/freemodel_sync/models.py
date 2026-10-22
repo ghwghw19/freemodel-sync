@@ -60,7 +60,7 @@ class TestResult:
         return asdict(self)
 
     @classmethod
-    def from_dict(cls, data: Dict[str, Any]) -> "TestResult":
+    def from_dict(cls, data: Dict[str, Any]) -> TestResult:
         fields = {k: data.get(k) for k in cls.__dataclass_fields__}  # type: ignore[attr-defined]
         fields["ok"] = bool(fields.get("ok"))
         fields["tested_at"] = float(fields.get("tested_at") or 0.0)
