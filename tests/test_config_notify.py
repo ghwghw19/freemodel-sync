@@ -114,3 +114,11 @@ def test_notify_skips_without_env_or_in_dry_run(monkeypatch):
 def test_build_message():
     msg = build_message(None, make_selection())
     assert msg.startswith("freemodel-sync: primary model changed: none -> openrouter|vendor/a:free")
+
+
+def test_example_config_is_valid():
+    from pathlib import Path
+
+    example = Path(__file__).resolve().parents[1] / "examples" / "config.example.yml"
+    cfg = load_config(example)
+    assert {t.adapter for t in cfg.targets} == {"openai-env", "openai-yaml", "dsh", "astrbot"}
