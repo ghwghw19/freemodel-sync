@@ -4,11 +4,10 @@ import json
 
 import httpx
 import pytest
+from conftest import make_selection
 
 from freemodel_sync.config import ConfigError, load_config
 from freemodel_sync.notify import build_message, notify_switch
-
-from conftest import make_selection
 
 
 def test_defaults_when_default_file_missing(tmp_path, monkeypatch):
