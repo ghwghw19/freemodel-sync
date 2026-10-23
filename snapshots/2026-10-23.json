@@ -1,22 +1,21 @@
 {
   "schema_version": 1,
   "date": "2026-10-23",
-  "generated_at": "2026-10-23T02:53:25Z",
+  "generated_at": "2026-10-23T05:30:04Z",
   "tool_version": "0.3.0",
   "mode": "probe",
   "max_probes": 15,
   "reserve": 10,
   "providers": {
     "openrouter": {
-      "status": "account_error",
+      "status": "ok",
       "discovered": 16,
-      "probes_sent": 11,
+      "probes_sent": 15,
       "quota": {
         "daily_free_limit": 50,
-        "daily_free_used": 7,
-        "daily_free_remaining": 43
-      },
-      "stop_reason": "account/quota error (200): xingchen-agi/xing4.0-29b-a4b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/setti"
+        "daily_free_used": 11,
+        "daily_free_remaining": 39
+      }
     },
     "groq": {
       "status": "ok",
@@ -26,9 +25,9 @@
   },
   "summary": {
     "models": 20,
-    "ok": 8,
-    "failed": 7,
-    "not_probed": 5
+    "ok": 13,
+    "failed": 6,
+    "not_probed": 1
   },
   "models": [
     {
@@ -42,8 +41,8 @@
       "days_until_expiry": null,
       "status": "ok",
       "failure_kind": null,
-      "ttft_ms": 1065,
-      "total_ms": 1799,
+      "ttft_ms": 417,
+      "total_ms": 589,
       "error": null
     },
     {
@@ -57,8 +56,8 @@
       "days_until_expiry": null,
       "status": "ok",
       "failure_kind": null,
-      "ttft_ms": 128,
-      "total_ms": 261,
+      "ttft_ms": 202,
+      "total_ms": 375,
       "error": null
     },
     {
@@ -70,11 +69,11 @@
       "supports_tools": true,
       "expiration_date": null,
       "days_until_expiry": null,
-      "status": "502",
-      "failure_kind": "transient",
-      "ttft_ms": null,
-      "total_ms": 355,
-      "error": "Provider returned error"
+      "status": "ok",
+      "failure_kind": null,
+      "ttft_ms": 258,
+      "total_ms": 438,
+      "error": null
     },
     {
       "key": "openrouter|thinkingmachines/inkling-small:free",
@@ -88,7 +87,7 @@
       "status": "403",
       "failure_kind": "model",
       "ttft_ms": null,
-      "total_ms": 22,
+      "total_ms": 19,
       "error": "thinkingmachines/inkling-small:free is only available on agentic harnesses. Try plugging it into a coding agent or productivity app listed on https://openrouter.ai/apps"
     },
     {
@@ -103,7 +102,7 @@
       "status": "403",
       "failure_kind": "model",
       "ttft_ms": null,
-      "total_ms": 17,
+      "total_ms": 104,
       "error": "thinkingmachines/inkling:free is only available on agentic harnesses. Try plugging it into a coding agent or productivity app listed on https://openrouter.ai/apps"
     },
     {
@@ -117,8 +116,8 @@
       "days_until_expiry": 69,
       "status": "ok",
       "failure_kind": null,
-      "ttft_ms": 486,
-      "total_ms": 919,
+      "ttft_ms": 465,
+      "total_ms": 992,
       "error": null
     },
     {
@@ -133,7 +132,7 @@
       "status": "429",
       "failure_kind": "transient",
       "ttft_ms": null,
-      "total_ms": 182,
+      "total_ms": 199,
       "error": "Provider returned error"
     },
     {
@@ -148,7 +147,7 @@
       "status": "429",
       "failure_kind": "transient",
       "ttft_ms": null,
-      "total_ms": 1446,
+      "total_ms": 117,
       "error": "Provider returned error"
     },
     {
@@ -163,7 +162,7 @@
       "status": "404",
       "failure_kind": "model",
       "ttft_ms": null,
-      "total_ms": 129,
+      "total_ms": 88,
       "error": "Provider returned error"
     },
     {
@@ -177,8 +176,8 @@
       "days_until_expiry": null,
       "status": "ok",
       "failure_kind": null,
-      "ttft_ms": 134,
-      "total_ms": 248,
+      "ttft_ms": 514,
+      "total_ms": 608,
       "error": null
     },
     {
@@ -190,11 +189,11 @@
       "supports_tools": true,
       "expiration_date": null,
       "days_until_expiry": null,
-      "status": "error",
-      "failure_kind": "account",
+      "status": "429",
+      "failure_kind": "transient",
       "ttft_ms": null,
-      "total_ms": 11562,
-      "error": "xingchen-agi/xing4.0-29b-a4b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations"
+      "total_ms": 358,
+      "error": "Provider returned error"
     },
     {
       "key": "openrouter|cohere/north-mini-code:free",
@@ -205,10 +204,10 @@
       "supports_tools": true,
       "expiration_date": null,
       "days_until_expiry": null,
-      "status": "not_probed",
+      "status": "ok",
       "failure_kind": null,
-      "ttft_ms": null,
-      "total_ms": null,
+      "ttft_ms": 224,
+      "total_ms": 419,
       "error": null
     },
     {
@@ -220,10 +219,10 @@
       "supports_tools": true,
       "expiration_date": null,
       "days_until_expiry": null,
-      "status": "not_probed",
+      "status": "ok",
       "failure_kind": null,
-      "ttft_ms": null,
-      "total_ms": null,
+      "ttft_ms": 291,
+      "total_ms": 753,
       "error": null
     },
     {
@@ -235,10 +234,10 @@
       "supports_tools": true,
       "expiration_date": null,
       "days_until_expiry": null,
-      "status": "not_probed",
+      "status": "ok",
       "failure_kind": null,
-      "ttft_ms": null,
-      "total_ms": null,
+      "ttft_ms": 6364,
+      "total_ms": 7862,
       "error": null
     },
     {
@@ -250,10 +249,10 @@
       "supports_tools": true,
       "expiration_date": "2026-10-31",
       "days_until_expiry": 8,
-      "status": "not_probed",
+      "status": "ok",
       "failure_kind": null,
-      "ttft_ms": null,
-      "total_ms": null,
+      "ttft_ms": 493,
+      "total_ms": 624,
       "error": null
     },
     {
@@ -282,8 +281,8 @@
       "days_until_expiry": null,
       "status": "ok",
       "failure_kind": null,
-      "ttft_ms": 295,
-      "total_ms": 323,
+      "ttft_ms": 214,
+      "total_ms": 241,
       "error": null
     },
     {
@@ -297,8 +296,8 @@
       "days_until_expiry": null,
       "status": "ok",
       "failure_kind": null,
-      "ttft_ms": 221,
-      "total_ms": 235,
+      "ttft_ms": 163,
+      "total_ms": 176,
       "error": null
     },
     {
@@ -312,8 +311,8 @@
       "days_until_expiry": null,
       "status": "ok",
       "failure_kind": null,
-      "ttft_ms": 55,
-      "total_ms": 59,
+      "ttft_ms": 45,
+      "total_ms": 48,
       "error": null
     },
     {
@@ -327,8 +326,8 @@
       "days_until_expiry": null,
       "status": "ok",
       "failure_kind": null,
-      "ttft_ms": 246,
-      "total_ms": 257,
+      "ttft_ms": 291,
+      "total_ms": 300,
       "error": null
     }
   ],
